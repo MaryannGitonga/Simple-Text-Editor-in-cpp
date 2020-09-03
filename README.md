@@ -2,7 +2,7 @@
 A simple text editor in C++ running on the terminal, using stacks to perform insert text, delete text and undo changes.
 
 ## Motivation
-To make a simple text editor that implements data structures (sepcifically stacks and linked lists) with GUI in Java. But first, tried it in C++ to test out the logic.
+To make a simple text editor that implements data structures (sepcifically stacks and linked lists) with GUI in Java. But first, tried it in C++ to test out the logic and build on a better understanding of the functionalities.
 
 ## Functionalities
 + Can insert text by appending to a tring variable
