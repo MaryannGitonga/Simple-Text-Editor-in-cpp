@@ -7,7 +7,7 @@ To make a simple text editor that implements data structures (sepcifically stack
 ## Functionalities
 + Can insert text by appending to a string variable
 + Can delete the last character from the string
-+ Can undo changes by getting the immediate previous state from a history stack that stores previous states of the string everytime a new insertion is made
++ Can undo and redo changes with the help of the history and redo stacks
 
 ## Improvements
 Add a cursor that will enable one to move to any position in the string and to insert or delete at any position.
