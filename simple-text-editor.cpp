@@ -4,13 +4,13 @@
 using namespace std;
 
 int main(){
-    stack <string> history;
+    stack <string> history, redo_stack;
     string final_text = "", text="";
     int choice;
 
     do{
         start:
-            cout << "SIMPLE TEXT EDITOR:\n1. Write text\n2. Delete text\n3. Undo changes\n4. Exit Program" << endl;
+            cout << "SIMPLE TEXT EDITOR:\n1. Write text\n2. Delete text\n3. Undo changes\n4. Redo changes\n5. Exit Program" << endl;
             cin >> choice;
 
             switch(choice){
@@ -33,15 +33,27 @@ int main(){
                     break;
                 case 3:
                     if(history.size() == 0){
-                        cout << "There are no more changes." << endl;
+                        cout << "There are no changes." << endl;
                     }
                     else{
+                        redo_stack.push(final_text);
                         final_text = history.top();
                         history.pop();
                         cout << final_text << endl;
                     }
                     break;
+                case 4:
+                    if(redo_stack.size() == 0){
+                        cout << "There are no changes." << endl;
+                    }
+                    else
+                    {
+                        final_text = redo_stack.top();
+                        redo_stack.pop();
+                        cout << final_text << endl;
+                    }
+
         }
-    }while(choice != 4);
+    }while(choice != 5);
     return 0;
 }
